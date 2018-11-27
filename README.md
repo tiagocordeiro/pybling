@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/tiagocordeiro/pybling.svg?branch=master)](https://travis-ci.org/tiagocordeiro/pybling)
 [![Updates](https://pyup.io/repos/github/tiagocordeiro/pybling/shield.svg)](https://pyup.io/repos/github/tiagocordeiro/pybling/)
 [![Python 3](https://pyup.io/repos/github/tiagocordeiro/pybling/python-3-shield.svg)](https://pyup.io/repos/github/tiagocordeiro/pybling/)
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/tiagocordeiro/pybling/blob/master/LICENSE)
 
 ### Como rodar o projeto?
 
