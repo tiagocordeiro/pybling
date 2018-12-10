@@ -8,7 +8,7 @@ load_dotenv()
 BLING_SECRET_KEY = os.getenv("BLING_API_KEY")
 
 
-def list_all():
+def list_products():
     url = 'https://bling.com.br/Api/v2/produtos/json/'
     payload = {'apikey': BLING_SECRET_KEY}
 
