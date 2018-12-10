@@ -1,6 +1,9 @@
 # pybling
 ## Integração com API do Bling usando Python
-
+[![Build Status](https://travis-ci.org/tiagocordeiro/pybling.svg?branch=master)](https://travis-ci.org/tiagocordeiro/pybling)
+[![Updates](https://pyup.io/repos/github/tiagocordeiro/pybling/shield.svg)](https://pyup.io/repos/github/tiagocordeiro/pybling/)
+[![Python 3](https://pyup.io/repos/github/tiagocordeiro/pybling/python-3-shield.svg)](https://pyup.io/repos/github/tiagocordeiro/pybling/)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/tiagocordeiro/pybling/blob/master/LICENSE)
 
 ### Como rodar o projeto?
 
@@ -26,5 +29,14 @@ python contrib/env_gen.py
 
 Rode os testes
 ```
-pytest tests/tests.py
+pytest tests/tests.py --verbosity=1 
+```
+
+Como usar
+```
+>>> from pybling.products import list_all
+>>> produtos = list_all()
+>>> produtos
+<Response [200]>
+
 ```
