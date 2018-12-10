@@ -7,4 +7,10 @@ py==1.7.0
 pytest==4.0.1
 six==1.11.0
 
+# Flake8
+flake8==3.6.0
+mccabe==0.6.1
+pycodestyle==2.4.0
+pyflakes==2.0.0
+
 -r requirements.txt

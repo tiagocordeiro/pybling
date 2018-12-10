@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.6.6"
+install:
+  - cp contrib/env-sample .env
+  - pip install -r requirements-dev.txt
+script:
+  - flake8
+  - pycodestyle pybling/
+  - pyflakes pybling/
+  - python -m doctest README.md -v
+  - pytest tests/tests.py --verbosity=1
