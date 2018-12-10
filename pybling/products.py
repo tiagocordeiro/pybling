@@ -1,5 +1,4 @@
 import os
-
 import requests
 from dotenv import load_dotenv
 
@@ -8,10 +7,9 @@ load_dotenv()
 BLING_SECRET_KEY = os.getenv("BLING_API_KEY")
 
 
-def list_all(page=1):
-    payload = {'apikey': BLING_SECRET_KEY}
-
+def list_products(page=1):
     url = f'https://bling.com.br/Api/v2/produtos/page={page}/json/'
+    payload = {'apikey': BLING_SECRET_KEY}
 
     if page == 'all':
         page = 1
@@ -40,12 +38,3 @@ def get_product(codigo):
 
     produto = requests.get(url, params=payload)
     return produto
-
-
-if __name__ == '__main__':
-    # todos_produtos = list_all(page='all')
-    # print(todos_produtos)
-    produto = get_product('PEC-0145')
-    detalhes = produto.json()['retorno']['produtos'][0]['produto']
-    print(detalhes['codigo'])
-    print(detalhes['descricao'])

@@ -5,10 +5,17 @@ more-itertools==4.3.0
 pluggy==0.8.0
 py==1.7.0
 pytest==4.0.1
-six==1.11.0
+six==1.12.0
 
-# CodeStyle
+# Flake8
+flake8==3.6.0
+mccabe==0.6.1
 pycodestyle==2.4.0
 pyflakes==2.0.0
+
+# Covarage
+coverage==4.5.2
+pytest-cov==2.6.0
+
 
 -r requirements.txt
