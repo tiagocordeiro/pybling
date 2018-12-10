@@ -34,8 +34,8 @@ pytest tests/tests.py --verbosity=1
 
 Como usar
 ```
->>> from pybling.products import list_all
->>> produtos = list_all()
+>>> from pybling.products import list_products
+>>> produtos = list_products()
 >>> produtos
 <Response [200]>
 
