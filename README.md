@@ -4,6 +4,7 @@
 [![Updates](https://pyup.io/repos/github/tiagocordeiro/pybling/shield.svg)](https://pyup.io/repos/github/tiagocordeiro/pybling/)
 [![Python 3](https://pyup.io/repos/github/tiagocordeiro/pybling/python-3-shield.svg)](https://pyup.io/repos/github/tiagocordeiro/pybling/)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/tiagocordeiro/pybling/blob/master/LICENSE)
+[![codecov](https://codecov.io/gh/tiagocordeiro/pybling/branch/master/graph/badge.svg)](https://codecov.io/gh/tiagocordeiro/pybling)
 
 ### Como rodar o projeto?
 
