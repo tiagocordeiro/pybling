@@ -63,3 +63,8 @@ def test_get_contact_content():
 
     retorno = get_contact(contato_codigo)
     assert 'nome' in retorno.text
+
+
+def test_get_all_contacts():
+    retorno = list_contacts(page='all')
+    assert 'contatos' in retorno['retorno']
