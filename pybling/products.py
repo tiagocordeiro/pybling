@@ -13,6 +13,7 @@ def list_products(page=1):
 
     if page == 'all':
         page = 1
+        all_products = {'retorno': {'produtos': []}}
 
         while True:
             url = f'https://bling.com.br/Api/v2/produtos/page={page}/json/'
@@ -21,12 +22,11 @@ def list_products(page=1):
                 pagina = produtos.json()['retorno']['produtos']
                 page += 1
                 for item in pagina:
-                    print(item['produto']['codigo'])
+                    all_products['retorno']['produtos'].append(item)
             except KeyError:
-                print('fim')
                 break
 
-        return produtos
+        return all_products
 
     produtos = requests.get(url, params=payload)
     return produtos
