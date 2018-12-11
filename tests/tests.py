@@ -31,6 +31,11 @@ def test_get_product_contents():
     assert 'descricao' in retorno.text
 
 
+def test_get_all_products():
+    retorno = list_products(page='all')
+    assert 'produtos' in retorno['retorno']
+
+
 # Testes para contatos
 def test_list_contacts_response_code_is_200():
     retorno = list_contacts()
