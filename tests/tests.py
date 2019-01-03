@@ -1,4 +1,5 @@
 from pybling.contacts import list_contacts, get_contact
+from pybling.notas import list_notas, get_nota
 from pybling.products import list_products, get_product
 
 
@@ -68,3 +69,24 @@ def test_get_contact_content():
 def test_get_all_contacts():
     retorno = list_contacts(page='all')
     assert 'contatos' in retorno['retorno']
+
+
+# Testes para notas fiscais
+def test_list_notas_response_code_is_200():
+    retorno = list_notas(("01/01/2018", "31/12/2018"), 6)
+    assert retorno.status_code == 200
+
+
+def test_list_notas_content():
+    retorno = list_notas(("01/01/2018", "31/12/2018"), 6)
+    assert 'notafiscal' in retorno.text
+
+
+def test_get_nota_status_code_200():
+    retorno = get_nota('000673', '1')
+    assert retorno.status_code == 200
+
+
+def test_get_nota_content():
+    retorno = get_nota('000673', '1')
+    assert 'numero' in retorno.text
