@@ -90,3 +90,8 @@ def test_get_nota_status_code_200():
 def test_get_nota_content():
     retorno = get_nota('000673', '1')
     assert 'numero' in retorno.text
+
+
+def test_get_all_notas():
+    retorno = list_notas(("01/01/2018", "31/12/2018"), 7, tipo='S', page='all')
+    assert 'notasfiscais' in retorno['retorno']
