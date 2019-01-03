@@ -8,7 +8,7 @@ script:
   - flake8
   - pycodestyle pybling/
   - pyflakes pybling/
-  - python -m doctest README.md -v
+  - python -m doctest README.md pybling/notas.py -v
   - pytest tests/tests.py --verbosity=1 --cov=pybling
 after_success:
   - codecov
