@@ -15,20 +15,12 @@ def test_list_products_contents():
 
 
 def test_get_product_response_code_is_200():
-    produtos = list_products()
-    produto = produtos.json()['retorno']['produtos'][0]
-    produto_codigo = produto['produto']['codigo']
-
-    retorno = get_product(codigo=produto_codigo)
+    retorno = get_product(codigo='PLA-0000134')
     assert retorno.status_code == 200
 
 
 def test_get_product_contents():
-    produtos = list_products()
-    produto = produtos.json()['retorno']['produtos'][0]
-    produto_codigo = produto['produto']['codigo']
-
-    retorno = get_product(codigo=produto_codigo)
+    retorno = get_product(codigo='PLA-0000134')
     assert 'descricao' in retorno.text
 
 
