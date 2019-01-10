@@ -79,7 +79,7 @@ def test_list_notas_response_code_is_200():
 
 def test_list_notas_content():
     retorno = list_notas(("01/01/2018", "31/12/2018"), 6)
-    assert 'notafiscal' in retorno.text
+    assert 'retorno' in retorno.text
 
 
 def test_get_nota_status_code_200():
