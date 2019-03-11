@@ -14,7 +14,7 @@ pycodestyle==2.4.0
 pyflakes==2.0.0
 
 # Covarage
-coverage==4.5.2
+coverage==4.5.3
 pytest-cov==2.6.1
 
 
