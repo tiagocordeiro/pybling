@@ -10,7 +10,8 @@ BLING_SECRET_KEY = os.getenv("BLING_API_KEY")
 
 def list_products(page=1):
     url = f'https://bling.com.br/Api/v2/produtos/page={page}/json/'
-    payload = {'apikey': BLING_SECRET_KEY}
+    payload = {'apikey': BLING_SECRET_KEY,
+               'imagem': 'S'}
 
     if page == 'all':
         page = 1
@@ -35,7 +36,8 @@ def list_products(page=1):
 
 def get_product(codigo):
     url = f'https://bling.com.br/Api/v2/produto/{codigo}/json/'
-    payload = {'apikey': BLING_SECRET_KEY}
+    payload = {'apikey': BLING_SECRET_KEY,
+               'imagem': 'S'}
 
     produto = requests.get(url, params=payload)
     return produto
