@@ -69,16 +69,14 @@ def find_package_data(
             if os.path.isdir(fn):
                 bad_name = False
                 for pattern in exclude_directories:
-                    if (fnmatchcase(name, pattern)
-                            or fn.lower() == pattern.lower()):
+                    if fnmatchcase(name, pattern) or fn.lower() == pattern.lower():
                         bad_name = True
                         if show_ignored:
                             print(f'Directory {fn} ignored by pattern {pattern}', file=sys.stderr)
                         break
                 if bad_name:
                     continue
-                if (os.path.isfile(os.path.join(fn, "__init__.py"))
-                        and not prefix):
+                if os.path.isfile(os.path.join(fn, "__init__.py")) and not prefix:
                     if not package:
                         new_package = name
                     else:
@@ -91,8 +89,7 @@ def find_package_data(
                 # is a file
                 bad_name = False
                 for pattern in exclude:
-                    if (fnmatchcase(name, pattern)
-                            or fn.lower() == pattern.lower()):
+                    if fnmatchcase(name, pattern) or fn.lower() == pattern.lower():
                         bad_name = True
                         if show_ignored:
                             print(f'File {fn} ignored by pattern {pattern}', file=sys.stderr)
@@ -140,7 +137,7 @@ setup(
     ],
     zip_safe=False,
     install_requires=[
-        'python-dotenv>=0.9.1',
-        'requests>=2.20.1',
+        'python-dotenv>=0.10.1',
+        'requests>=2.21.0',
     ]
 )
