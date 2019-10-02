@@ -1,9 +1,9 @@
 # Requests
-certifi==2019.3.9
+certifi==2019.9.11
 chardet==3.0.4
 idna==2.8
-requests==2.21.0
-urllib3==1.24.3
+requests==2.22.0
+urllib3==1.25.6
 
 # Python-dotenv
-python-dotenv==0.10.1
+python-dotenv==0.10.3
