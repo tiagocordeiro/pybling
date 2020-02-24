@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-CONFIG_STRING = """
-BLING_API_KEY=Y0uR_Bling_API_Key
+CONFIG_STRING = """BLING_API_KEY=Y0uR_Bling_API_Key
 """
 
 # Writing our configuration file to '.env'

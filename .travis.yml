@@ -7,7 +7,6 @@ install:
 script:
   - flake8 .
   - pycodestyle .
-  - pyflakes pybling/
   - python -m doctest README.md pybling/notas.py -v
   - pytest tests/tests.py --verbosity=1 --cov=pybling
 after_success:
