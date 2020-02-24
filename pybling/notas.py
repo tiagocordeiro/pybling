@@ -8,7 +8,7 @@ load_dotenv()
 BLING_SECRET_KEY = os.getenv("BLING_API_KEY")
 
 
-def list_notas(periodo, situcacao, tipo='S', page=1):
+def list_notas(periodo, situcacao, tipo="S", page=1):
     """
     Função que retorna todas as notas fiscais
     :param periodo: ('01/01/2018','31/12/2018')
@@ -22,23 +22,26 @@ def list_notas(periodo, situcacao, tipo='S', page=1):
     >>> notas
     <Response [200]>
     """
-    url = f'https://bling.com.br/Api/v2/notasfiscais/page={page}/json/'
-    payload = {'apikey': BLING_SECRET_KEY,
-               'filters': f"dataEmissao[{periodo[0]} TO {periodo[1]}]; situacao[{situcacao}]; tipo[{tipo}]",
-               }
+    url = f"https://bling.com.br/Api/v2/notasfiscais/page={page}/json/"
+    payload = {
+        "apikey": BLING_SECRET_KEY,
+        "filters": f"dataEmissao[{periodo[0]} TO {periodo[1]}]; \
+        situacao[{situcacao}]; \
+        tipo[{tipo}]",
+    }
 
-    if page == 'all':
+    if page == "all":
         page = 1
-        all_notas = {'retorno': {'notasfiscais': []}}
+        all_notas = {"retorno": {"notasfiscais": []}}
 
         while True:
-            url = f'https://bling.com.br/Api/v2/notasfiscais/page={page}/json/'
+            url = f"https://bling.com.br/Api/v2/notasfiscais/page={page}/json/"
             notas = requests.get(url, params=payload)
             try:
-                pagina = notas.json()['retorno']['notasfiscais']
+                pagina = notas.json()["retorno"]["notasfiscais"]
                 page += 1
                 for item in pagina:
-                    all_notas['retorno']['notasfiscais'].append(item)
+                    all_notas["retorno"]["notasfiscais"].append(item)
             except KeyError:
                 break
 
@@ -66,8 +69,8 @@ def get_nota(numero, serie):
     >>> nota.json()['retorno']['notasfiscais'][0]['notafiscal']['dataEmissao']
     '2018-12-05 13:10:43'
     """
-    url = f'https://bling.com.br/Api/v2/notafiscal/{numero}/{serie}/json/'
-    payload = {'apikey': BLING_SECRET_KEY}
+    url = f"https://bling.com.br/Api/v2/notafiscal/{numero}/{serie}/json/"
+    payload = {"apikey": BLING_SECRET_KEY}
 
     nota = requests.get(url, params=payload)
     return nota
