@@ -1,5 +1,5 @@
 # Pytest
-pytest==5.3.5
+pytest==7.0.1
 
 # Lint
 flake8==3.7.9
