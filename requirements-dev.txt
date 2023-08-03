@@ -1,12 +1,12 @@
 # Pytest
-pytest==5.3.5
+pytest==7.4.0
 
 # Lint
-flake8==3.7.9
-pycodestyle==2.5.0
+flake8==6.1.0
+pycodestyle==2.11.0
 
 # Covarage
-coverage==5.0.3
-pytest-cov==2.8.1
+coverage==7.2.7
+pytest-cov==4.1.0
 
 -r requirements.txt

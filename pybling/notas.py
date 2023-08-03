@@ -8,11 +8,11 @@ load_dotenv()
 BLING_SECRET_KEY = os.getenv("BLING_API_KEY")
 
 
-def list_notas(periodo, situcacao, tipo="S", page=1):
+def list_notas(periodo, situacao, tipo="S", page=1):
     """
     Função que retorna todas as notas fiscais
     :param periodo: ('01/01/2018','31/12/2018')
-    :param situcacao: 6
+    :param situacao: 6
     :param tipo: 'S' # 'S' Saída / 'E' Entrada
     :param page: 'all' # Ou 1
     :return: Retorna as notas filtradas por período e situação e tipo
@@ -26,7 +26,7 @@ def list_notas(periodo, situcacao, tipo="S", page=1):
     payload = {
         "apikey": BLING_SECRET_KEY,
         "filters": f"dataEmissao[{periodo[0]} TO {periodo[1]}]; \
-        situacao[{situcacao}]; \
+        situacao[{situacao}]; \
         tipo[{tipo}]",
     }
 
