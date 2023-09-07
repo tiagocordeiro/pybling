@@ -6,7 +6,7 @@ flake8==6.1.0
 pycodestyle==2.11.0
 
 # Covarage
-coverage==7.2.7
+coverage==7.3.1
 pytest-cov==4.1.0
 
 -r requirements.txt
